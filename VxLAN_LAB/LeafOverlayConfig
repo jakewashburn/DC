@@ -1,0 +1,28 @@
+leaf 1
+Enabling VXLAN
+Features
+
+Configuring VLAN and VxLAN VNI
+
+```vlan 1000
+name MOO
+vn-segment 5000
+
+interface 1/3
+switchport
+switchport access vlan 1000
+no shut```
+
+Creating VRF overlay VLAN for VxLAN Routing
+
+vrf context MOOBROWN
+vni 5000
+rd auto
+address-family ipv4 unicast
+route-target both auto
+route-target both auto evpn
+address-family ipv6 unicast
+route-target both auto
+route-target both auto evpn
+
+
