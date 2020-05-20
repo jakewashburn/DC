@@ -4,9 +4,11 @@ Features
 
 Configuring VLAN and VxLAN VNI
 
-```vlan 1000
+```
+vlan 1000
 name MOO
-vn-segment 5000```
+vn-segment 500
+```
 
 interface 1/3
 switchport
